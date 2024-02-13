@@ -24,16 +24,16 @@ module.exports = () => {
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: './src-sw.js'
+        swDest: 'src-sw.js'
       }),
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name:'',
-        short_name: 'J.A.T.E',
-        description: "Note and text editor",
-        background_color:'',
-        theme_color:'',
+        name: 'Just Another Text Editor',
+        short_name: 'J.A.T.E.',
+        description: "Note and text editor!",
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
         start_url: '/',
         publicPath: '/',
         icons: [
