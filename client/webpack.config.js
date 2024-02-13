@@ -18,7 +18,22 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title: 'JATE'
+      }),
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: './src-sw.js'
+      }),
+      new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
+        name:'',
+        short_name: 'J.A.T.E',
+        description: "Note and text editor",
+
+      }) 
     ],
 
     module: {
